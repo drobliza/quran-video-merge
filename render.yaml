@@ -3,7 +3,7 @@ services:
   - type: web
     name: quran-video-merge
     runtime: python
-    repo: https://github.com/drobliza/your-repo-name
+    repo: https://github.com/drobliza/-
     plan: free
     region: oregon
     buildCommand: pip install -r requirements.txt

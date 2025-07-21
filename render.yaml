@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: quran-video-merge
+    env: python
+    plan: free
+    repo: https://github.com/drobliza/quran-video-merge
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    autoDeployTrigger: commit
+version: "1"

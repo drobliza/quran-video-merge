@@ -1,12 +1,12 @@
-# Exported from Render on 2025-07-21
 services:
   - type: web
     name: quran-video-merge
-    runtime: python
-    repo: https://github.com/drobliza/quran-video-merge
+    env: python
     plan: free
-    region: oregon
+    repo: https://github.com/drobliza/quran-video-merge
+    branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
-    autoDeployTrigger: commit
-version: "1"
+    envVars:
+      - key: FLASK_ENV
+        value: production

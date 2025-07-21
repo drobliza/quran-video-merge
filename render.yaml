@@ -4,9 +4,8 @@ services:
     env: python
     plan: free
     repo: https://github.com/drobliza/quran-video-merge
-    branch: main
+    branch: main  # أو main حسب الفرع في الريبو
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
-    envVars:
-      - key: FLASK_ENV
-        value: production
+    autoDeployTrigger: commit
+version: "1"

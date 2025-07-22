@@ -1,6 +1,9 @@
 services:
   - type: web
     name: quran-video-merge
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: "gunicorn app:app"
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    autoDeploy: true
+    ports:
+      - 10000

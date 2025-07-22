@@ -5,4 +5,3 @@ imageio
 imageio-ffmpeg
 requests
 gdown
-moviepy
